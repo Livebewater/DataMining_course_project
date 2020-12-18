@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "book_rate/style_index.css" %}">
+</head>
+<body>
+<header class="header">
+    <nav>
+        <ul>
+            {% if flag is None %}
+                <li><a href="/accounts/login">登录</a></li>
+                <li><a href="/accounts/signup">注册</a></li>
+            {% endif %}
+            <li class="search"><a href="{{ user_id }}/search" class="search">搜索图书</a></li>
+            {% if flag == True or flag is not None %}
+                <li class="my-rate"><a href="{{ user_id }}/my_rate" class="my-rate">我的评分</a></li>
+            {% endif %}
+            {% if user_id is not None %}
+                <li class="banner">你好, {{ user_name }}</li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+
+<section class="section">
+    <ul class="functions">
+        <li class="function-box">
+            <div class="function-title"><a>近期新增加的图书</a></div>
+            <div class="recent"><a href="/recent">更多</a></div>
+            <ul class="recent-books">
+                {% for book in recent_books %}
+                    <li class="recent-book">
+                        <p><a href="/books/{{ book.isbn }}"><img src="{{ book.image_url }}"></a></p>
+                        <p><span><a href="/books/{{ book.isbn }}">名称: {{ book.title }}</a></span></p>
+                        <p><span>添加日期: {{ book.add_date }}</span></p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+
+        <li class="function-box">
+            <div class="function-title"><a>评分排行</a></div>
+            <div class="popular"><a href="/popular">更多</a></div>
+            <ul class="popular-books">
+                {% for book in popular_books %}
+                    <li class="popular-book">
+                        <p><img src="{{ book.image_url }}" alt="book-image"></p>
+                        <p><span><a href="/books/{{ book.isbn }}">名称:{{ book.title }}</a></span></p>
+                        <p><span>平均得分:{{ book.mean_score }}</span></p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+
+    </ul>
+    <div class="loading"><img src="{% static "book_rate/load.svg" %}" alt="load-icon"></div>
+</section>
+
+<footer>
+{#    <div>Hello World</div>#}
+</footer>
+<script src="{% static "book_rate/jquery.js" %}"></script>
+<script src="{% static "book_rate/index.js" %}"></script>
+</body>
+</html>

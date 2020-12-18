@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "book_rate/style_login.css" %}">
+</head>
+<body>
+    <div class="section">
+        <div class="input">
+            <label>name</label>
+            <input name="name" class="name">
+        </div>
+        <div class="input">
+            <label>password</label>
+            <input name="password" class="password" type="password">
+        </div>
+        <div class="input">
+            <input type="submit" value="login" class="button">
+        </div>
+    </div>
+    <script src="{% static "book_rate/jquery.js" %}"></script>
+    <script src="{% static "book_rate/login.js" %}"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.section{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 700px;
+    width: 600px;
+}
+.input{
+    height: 100px;
+    width: 600px;
+}
+.section div{
+    margin: 15px 0;
+}
+.name, .location, .age, .password{
+    height: 40px;
+    width: 507px;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+}
+label{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    padding: 0;
+    margin: 0 25px 0 0;
+    font-size: 20px;
+}
+.button{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    position: relative;
+    left: 250px;
+}

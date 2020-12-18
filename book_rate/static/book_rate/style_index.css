@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #447e9b;
+    height: 70px;
+    padding-top: 10px;
+}
+
+.header ul {
+    display: flex;
+    padding: 0;
+}
+
+.header li {
+    border: #5b80b2;
+    list-style: none;
+    margin: 0 30px;
+    color: white;
+    font-size: 20px;
+    width: 100px
+}
+
+.banner {
+    padding-left: 75%;
+    color: white;
+    text-align: right;
+}
+
+.header a {
+    text-decoration: none;
+    text-decoration-color: white;
+    color: white;
+}
+
+.section {
+    height: 300px;
+}
+
+.section .functions {
+    padding: 0;
+}
+
+.function-title {
+    display: inline-block;
+    width: 10%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.section .function-box {
+    list-style: none;
+    border-top: thin solid #5b80b2;
+    border-bottom: thin solid #5b80b2;
+    margin: 50px 20px;
+    height: 300px;
+}
+
+.loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popular, .recent {
+    width: 50px;
+    display: inline-block;
+    position: relative;
+    left: 87.32%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.popular-books, .recent-books {
+    padding: 7px;
+
+}
+
+.recent-book, .popular-book {
+    width: 350px;
+    height: 300px;
+    display: inline-block;
+    margin: 20px 8px;
+    text-align: center;
+    vertical-align: top
+}
+
+.recent-book p, .popular-book p {
+    margin: 5px 0;
+}
+.section img{
+    width: 50px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    top: 100%;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static "book_rate/style_search.css" %}">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                {% if flag is None %}
+                    <li class="login"><a href="/accounts/login">登录</a></li>
+                    <li><a href="/accounts/signup">注册</a></li>
+                {% endif %}
+                {% if flag == True %}
+                     <li class="banner">你好, {{ user_name }}</li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div><button name="isbn_type" class="type-button">id</button></div>
+        <div><button name="author_type" class="type-button">author</button></div>
+        <div><button name="title_type" class="type-button">title</button></div>
+        <div><button name="pubdate_type" class="type-button">published_date</button></div>
+        <div><button name="date_type" class="type-button">add_date</button></div>
+        <div class="input">
+            <input type="text" name="text" class="text">
+            <input type="submit" class="button">
+        </div>
+        <ul class="result"></ul>
+    </section>
+    <script src="{% static "book_rate/jquery.js" %}"></script>
+    <script src="{% static "book_rate/search.js" %}"></script>
+</body>
+</html>

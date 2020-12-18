@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="{% static "book_rate/style_signup.css" %}">
+    </head>
+    <body>
+        <div class="section">
+            <div class="input">
+                <label>Name</label>
+                <input name="name" class="name">
+            </div>
+            <div class="input">
+                <label>Password</label>
+                <input name="password" class="password" type="password">
+            </div>
+            <div class="input">
+                <label>Location</label>
+                <input name="location" class="location">
+            </div>
+            <div class="input">
+                <label>Age</label>
+                <input name="age" class="age" type="number">
+            </div>
+            <div>
+                <input type="submit" value="login" class="button">
+            </div>
+        </div>
+    <script src="{% static "book_rate/jquery.js" %}"></script>
+    <script src="{% static "book_rate/signup.js" %}"></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <section>
+        <ul></ul>
+        {% for rate in rates %}
+            <li class="rate-box">
+                <div class="isbn">isbn: {{ rate.book.isbn }}</div>
+                <div class="title">title: {{ rate.book.title }}</div>
+                <div class="score">score: {{ rate.score }}</div>
+                <button class="alter">alter</button>
+                <button class="delete">delete</button>
+            </li>
+        {% endfor %}
+    </section>
+    <script src="{% static "book_rate/jquery.js" %}"></script>
+    <script src="{% static "book_rate/my_rate.js" %}"></script>
+</body>
+</html>

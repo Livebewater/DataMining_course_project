@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static "book_rate/style_recent.css" %}>"
+</head>
+<body>
+    <ul>
+        {%  for book in recent_add %}
+        <li>            
+            <div>isbn: {{ book.isbn }}</div>
+            <div>title: {{book.title}}</div>
+            <div>author: {{book.author}} </div>
+            <div>published_year: {{book.year_or_publication}}</div>
+            <div>published: {{book.publisher}}</div>            
+        </li>
+        {%  endfor %}
+    </ul>
+</body>
+</html>
